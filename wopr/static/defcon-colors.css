@@ -1,0 +1,7 @@
+.status-panel[data-defcon="1"] { --defcon-color:#F0F0F0; }
+.status-panel[data-defcon="2"] { --defcon-color:#D71935; }
+.status-panel[data-defcon="3"] { --defcon-color:#F4D21B; }
+.status-panel[data-defcon="4"] { --defcon-color:#24964B; }
+.status-panel[data-defcon="5"] { --defcon-color:#178ACB; }
+.status-panel[data-defcon] { border:2px solid var(--defcon-color) !important; box-shadow:0 0 8px var(--defcon-color),inset 0 0 8px var(--defcon-color) !important; transition:border-color .4s ease,box-shadow .4s ease; }
+.status-panel[data-defcon] #defcon { color:var(--defcon-color) !important; text-shadow:0 0 8px var(--defcon-color); }

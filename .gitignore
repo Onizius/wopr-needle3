@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Credentials and environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*token*
+# Databases and runtime data
+*.sqlite3
+*.sqlite3-*
+*.db
+data/
+cache/
+caches/
+logs/
+*.log
+# AI models and downloaded weights
+*.gguf
+*.safetensors
+*.onnx
+*.hef
+*.bin
+# Backups and archives
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.bak
+# Local development
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

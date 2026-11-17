@@ -1,0 +1,18 @@
+
+/* Windows restoration layer: retro six-display WOPR / NORAD */
+:root{--amber:#efb65d;--gold:#ffce81;--dim:#a78c58;--green:#8eeaa0;--bg:#020805;--panel:#06100b;--line:#456b4c;--red:#f48c64}
+html,body{background:#020604;color:#d2b778;font-family:Consolas,'Courier New',monospace}
+header,footer{background:#08100b;border-color:#446a4d}header .title{color:#e7c27d}header .mid{color:#86b38c}
+.grid{gap:5px;padding:5px;grid-template-rows:minmax(255px,43vh) minmax(430px,1fr)}
+.panel{background:radial-gradient(ellipse at 50% 50%,#0b1c13,#030a07 78%);border:2px solid #477a50;box-shadow:inset 0 0 28px #000c,0 0 6px #183d24}
+.panel-head,.foot{background:#09180e;border-color:#335b3c;color:#c5d19b}
+.panel-head span:last-child{color:#95e1a5}
+.terminal-panel{border-color:#65a56b}.terminal{background:radial-gradient(ellipse,#08240d,#021007 85%);color:#b5f6b9;font-size:13px;line-height:1.5;text-shadow:0 0 7px #3be26488}
+.terminal .system{color:#a9dfaa}.terminal .user{color:#f0d090}.terminal .assistant{color:#b4ffb9}
+#chat-form{background:#06180a;border-color:#3d7547}#chat-form input{color:#b4ffb9}
+.defcon{background:#1a1b0d;border-color:#87764b}.defcon strong{color:#ffcf79}
+.status-content{gap:8px;padding:10px}.scenario{margin-top:4px}
+.token-panel{border:1px solid #426d49;background:#08180e;padding:8px}.token-heading{font-size:10px;letter-spacing:1px;color:#b1d7a4;margin-bottom:7px}.token-grid,.hardware-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 10px}.token-grid div,.hardware-grid div{display:flex;justify-content:space-between;gap:5px;border-bottom:1px dashed #34533a;padding:3px 0;color:#8fac86;font-size:10px}.token-grid b,.hardware-grid b{color:#e9d28e;font-weight:normal;text-align:right}
+.hardware-grid{padding:5px 13px 10px}.core-top{padding:10px 13px 5px}.core-icon{color:#d2d88e;border-color:#5d8b5b}.core-text{line-height:1.55}.game{padding:8px 12px}.board{grid-template-columns:repeat(3,35px);grid-template-rows:repeat(3,32px);margin:6px auto}.board button{font-size:20px}
+@media(max-width:1050px){.grid{grid-template-rows:repeat(3,minmax(310px,auto))}.wopr-panel,.status-panel{min-height:470px}}
+@media(max-width:650px){.grid{grid-template-rows:repeat(3,250px) auto 440px auto}}

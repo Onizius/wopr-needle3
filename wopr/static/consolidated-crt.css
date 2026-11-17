@@ -1,0 +1,35 @@
+/* Consolidated CRT: only actual terminal and panels, no duplicated effects */
+.terminal-panel{isolation:isolate}
+.terminal-panel::before{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;
+background:repeating-linear-gradient(to bottom,transparent 0 2px,rgba(0,0,0,.19) 3px,transparent 4px);
+opacity:.64}
+.terminal-panel::after{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;
+box-shadow:inset 0 0 30px 7px #0009}
+.terminal-panel .terminal{font-family:"Lucida Console","Courier New",monospace;font-size:11px;
+font-weight:500;letter-spacing:.11px;line-height:1.55;color:#83f7a6;
+text-shadow:0 0 1px #a7ffc5,0 0 4px #29ff78aa,0 0 8px #20fa6333}
+.terminal-panel #prompt{font-family:"Lucida Console","Courier New",monospace;
+caret-color:#b6ffbd;color:#aaffb9}
+.terminal .line.assistant.wopr-typing::after{content:"";display:inline-block;
+width:.66em;height:1em;background:#b4ffc2;margin-left:2px;vertical-align:-.16em;
+box-shadow:0 0 7px #50ff84;animation:wopr-blink .8s steps(1,end) infinite}
+@keyframes wopr-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.panel{box-shadow:0 0 4px #b6d9ff,0 0 11px #639bfa99,inset 0 0 8px #3264a544}
+.map-panel canvas{filter:contrast(1.06) saturate(1.08)}
+@media(prefers-reduced-motion:reduce){.terminal .line.assistant.wopr-typing::after{animation:none}}
+
+/* Keep the operator prompt pinned at the bottom of the terminal. */
+.terminal-panel{display:flex;flex-direction:column;overflow:hidden}
+.terminal-panel #terminal{flex:1 1 auto;min-height:0;overflow-y:auto}
+.terminal-panel #chat-form{display:flex;flex:0 0 auto;min-height:43px;position:relative;z-index:7;background:#031018}
+.terminal-panel #chat-form[hidden]{display:none}
+.terminal-panel #chat-form input{min-width:0;flex:1}
+#wopr-config-view{flex:1;min-height:0;overflow:auto;padding:14px 17px;color:#9feab7;font:11px "Lucida Console",monospace;position:relative;z-index:7}
+#wopr-config-view[hidden]{display:none}
+#wopr-config-view .config-title{color:#91d7ff;font-weight:bold;border-bottom:1px dotted #39739c;padding-bottom:10px;margin-bottom:12px}
+#wopr-config-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#wopr-config-form label{display:flex;flex-direction:column;gap:5px}
+#wopr-config-form input{background:#031219;border:1px solid #39739c;color:#aaffbd;padding:8px}
+#wopr-config-form .config-actions{grid-column:1/-1;display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+#wopr-config-form button{color:#aaffbd;border:1px solid #39739c;padding:8px}
+#wopr-config-view .config-note{margin-top:18px;color:#77bba5}

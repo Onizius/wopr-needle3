@@ -1,0 +1,28 @@
+/* WOPR restored-style frontend overlay. No backend changes. */
+:root{--amber:#e8a84e;--gold:#f5c57b;--dim:#9e7b49;--green:#8cdba6;--bg:#020608;--panel:#030a0b;--line:#6d522a;--red:#ed785a}
+html,body{background:#020507;color:#e8a84e;font-family:Consolas,'Courier New',monospace;font-size:12px}
+body:before{background:repeating-linear-gradient(0deg,rgba(0,0,0,.19) 0px,rgba(0,0,0,.19) 1px,transparent 2px,transparent 4px);opacity:.55}
+body:after{box-shadow:inset 0 0 90px #000b;opacity:.8}
+header{height:52px;background:linear-gradient(#0d1515,#020606);border-bottom:2px solid #74502a}
+header .title{font-size:18px;letter-spacing:2px;text-shadow:0 0 9px #c67d28}
+header .mid{color:#9f7c48;letter-spacing:2px}
+.grid{gap:8px;padding:8px;grid-template-rows:minmax(280px,43vh) minmax(440px,1fr);min-height:calc(100vh - 86px)}
+.panel{background:radial-gradient(ellipse at 50% 35%,#091d1c 0%,#020708 75%);border:1px solid #78572b;box-shadow:inset 0 0 22px #000,0 0 0 1px #191409}
+.panel-head{background:linear-gradient(90deg,#1d160c,#0b1413);border-bottom:1px solid #73542c;font-size:11px;letter-spacing:1.2px;padding:9px 12px}
+.panel-head span:first-child:before{content:'▣ ';color:#d9a55c}
+.panel-head span:last-child{color:#77d9a7}
+.map-panel{overflow:hidden}.map-panel:after{content:'';position:absolute;inset:37px 0 23px;pointer-events:none;background:radial-gradient(ellipse,transparent 48%,#0007 100%)}
+.map-panel canvas{filter:contrast(1.15) saturate(1.12)}
+.foot{background:#0a0e0c;border-top:1px solid #614c2b;color:#b59053}
+.defcon{background:linear-gradient(90deg,#2d1d0c,#100d09);border:1px solid #90612b}
+.defcon strong{font-size:72px;text-shadow:0 0 25px #e18d38}
+.stats{gap:10px}.stats div{padding:8px 0}.stats b{font-size:18px}
+.terminal-panel{background:radial-gradient(ellipse at 50% 40%,#061811,#020806 80%)}
+.terminal{font-size:13px;line-height:1.65;color:#9df3ad;text-shadow:0 0 9px #38cb6855;padding:16px}
+.terminal .system{color:#e9b96c}.terminal .assistant{color:#9ef2b3}.terminal .user{color:#f3d18a}
+.terminal-toolbar{background:#090f0d}#chat-form{background:#06100b}#chat-form input{font-size:13px}
+.core-icon{border:2px solid #bb8740;box-shadow:0 0 15px #a3672a55,inset 0 0 14px #a3672a33}
+.core-top{padding-top:22px}.core-meter .meter{height:13px}.board button{background:#061512}
+footer{background:#050b0a}
+@media(max-width:1050px){.grid{grid-template-rows:repeat(3,minmax(320px,auto))}}
+@media(max-width:650px){.grid{grid-template-rows:repeat(3,280px) auto 440px auto}header .title{font-size:13px}}

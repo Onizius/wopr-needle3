@@ -1,0 +1,35 @@
+name: wopr-needle3-github
+services:
+  needle3:
+    build: ./needle3
+    restart: unless-stopped
+    environment:
+      DO_NOT_TRACK: "1"
+      CACTUS_TELEMETRY: "0"
+    volumes:
+      - needle_cactus:/root/.cache/cactus
+      - needle_huggingface:/root/.cache/huggingface
+    networks:
+      - wopr_net
+  wopr:
+    build: ./wopr
+    restart: unless-stopped
+    depends_on:
+      - needle3
+    ports:
+      - "127.0.0.1:${WOPR_PORT:-3007}:8000"
+    environment:
+      DATA_DIR: /data
+      NEEDLE_URL: http://needle3:8000
+      OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
+    volumes:
+      - wopr_data:/data
+    networks:
+      - wopr_net
+volumes:
+  wopr_data:
+  needle_cactus:
+  needle_huggingface:
+networks:
+  wopr_net:
+    driver: bridge
