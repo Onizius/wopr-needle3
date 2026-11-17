@@ -1,6 +1,10 @@
-﻿# WOPR + Needle 3
+# WOPR + Needle 3
 
 A retro WarGames-inspired WOPR web dashboard integrated with Cactus Compute Needle 3 and Ollama.
+
+## Screenshot
+
+![WOPR WarGames + Needle 3 Dashboard](docs/wopr-needle3-dashboard.png)
 
 ## Features
 
