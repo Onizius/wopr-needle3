@@ -75,6 +75,13 @@ docker compose down
 
 The down command preserves named volumes unless explicitly requested otherwise.
 
+## Geographic data
+
+The world land polygons in `wopr/static/land.json` are derived from **Natural Earth**, dataset **1:110m Land**, version **4.1.0**. Natural Earth map data is in the public domain.
+
+Source: https://www.naturalearthdata.com/
+Dataset: https://naciscdn.org/naturalearth/110m/physical/ne_110m_land.zip
+
 ## Notes
 
 This project is a fictional simulation interface, not a real military system. Third-party source code, models, assets, and dependencies retain their respective licenses. Review applicable licenses before redistribution.
